@@ -24,6 +24,7 @@ $daftarKaryawan = [
 ];
 
 $karyawanPengalamanLimaTahun = [];
+
 foreach ($daftarKaryawan as $karyawan) {
     if ($karyawan[1] > 5) {
         $karyawanPengalamanLimaTahun[] = $karyawan[0];
@@ -76,7 +77,9 @@ echo "Daftar nilai mahasiswa dalam mata kuliah $mataKuliah: <br>";
         $totalNilai += $siswa[1];
     }
     $rataRataKelas = $totalNilai / count($daftarNilaiSiswa);
+    
     echo "Daftar nilai siswa yang mencapai nilai di atas rata-rata kelas:\n";
+    
     foreach ($daftarNilaiSiswa as $siswa) {
         if ($siswa[1] > $rataRataKelas) {
             echo $siswa[0] . " dengan nilai " . $siswa[1] . "\n";
