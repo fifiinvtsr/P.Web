@@ -14,7 +14,7 @@ while ($row = $res1->fetch_assoc()) {
     $h['nama'] = $row['nama'];
     $h['jenis_kelamin'] = $row['jenis_kelamin'];
     $h['alamat'] = $row['alamat'];
-    $h['no_telp'] = $row['no_telp'];
+    $h['no_tlp'] = $row['no_tlp'];
 }
 
 echo json_encode($h);

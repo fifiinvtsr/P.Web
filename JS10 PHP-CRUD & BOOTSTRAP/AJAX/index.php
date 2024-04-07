@@ -56,8 +56,8 @@ include("auth.php");
 
             <div class="form-group">
                 <label>No Telepon</label>
-                <input type="number" name="no_telp" id="no_telp" class="form-control" required="true">
-                <p class="text-danger" id="err_no_telp"></p>
+                <input type="number" name="no_tlp" id="no_tlp" class="form-control" required="true">
+                <p class="text-danger" id="err_no_tlp"></p>
             </div>
 
             <div class="form-group">
@@ -97,7 +97,7 @@ include("auth.php");
                 var jenkel2 = document.getElementById("jenkel2").value;
                 var nama = document.getElementById("nama").value;
                 var alamat = document.getElementById("alamat").value;
-                var no_telp = document.getElementById("no_telp").value;
+                var no_telp = document.getElementById("no_tlp").value;
 
                 if (nama == "") {
                     document.getElementById("err_nama").innerHTML = "Nama Harus Diisi";
@@ -118,11 +118,11 @@ include("auth.php");
                 }
 
                 if (no_telp == "") {
-                    document.getElementById("err_no_telp").innerHTML = "No Telepon Harus Diisi";
+                    document.getElementById("err_no_tlp").innerHTML = "No Telepon Harus Diisi";
                 } else {
-                    document.getElementById("err_no_telp").innerHTML = "";
+                    document.getElementById("err_no_tlp").innerHTML = "";
                 }
-                if (nama != "" && alamat != "" && (document.getElementById("jenkel1").checked == true || document.getElementById("jenkel2").checked == true) && no_telp != "") {
+                if (nama != "" && alamat != "" && (document.getElementById("jenkel1").checked == true || document.getElementById("jenkel2").checked == true) && no_tlp != "") {
                     $.ajax({
                         type: 'POST',
                         url: "form_action.php",

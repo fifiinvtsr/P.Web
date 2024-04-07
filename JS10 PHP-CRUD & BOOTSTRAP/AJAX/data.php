@@ -5,7 +5,7 @@
             <th>Nama</th>
             <th>Jenis Kelamin</th>
             <th>Alamat</th>
-            <th>No Telp</th>
+            <th>No Tlp</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -25,14 +25,14 @@
                 $nama = $row['nama'];
                 $jenis_kelamin = ($row['jenis_kelamin'] == 'L') ? 'Laki-laki' : 'Perempuan';
                 $alamat = $row['alamat'];
-                $no_telp = $row['no_telp'];
+                $no_tlp = $row['no_tlp'];
         ?>
                 <tr>
                     <td><?= $no++ ?></td>
                     <td><?= $nama ?></td>
                     <td><?= $jenis_kelamin ?></td>
                     <td><?= $alamat ?></td>
-                    <td><?= $no_telp ?></td>
+                    <td><?= $no_tlp ?></td>
                     <td>
                         <button id="<?php echo $id; ?>" class="btn btn-success btn-sm edit_data">
                             <i class="fa fa-edit"></i>Edit
@@ -64,7 +64,7 @@
         document.getElementById("err_nama").innerHTML = "";
         document.getElementById("err_jenis_kelamin").innerHTML = "";
         document.getElementById("err_alamat").innerHTML = "";
-        document.getElementById("err_no_telp").innerHTML = "";
+        document.getElementById("err_no_tlp").innerHTML = "";
     }
 
     $(document).on('click', '.edit_data', function() {
@@ -84,7 +84,7 @@
                 document.getElementById("id").value = response.id;
                 document.getElementById("nama").value = response.nama;
                 document.getElementById("alamat").value = response.alamat;
-                document.getElementById("no_telp").value = response.no_telp;
+                document.getElementById("no_tlp").value = response.no_telp;
                 if (response.jenis_kelamin == "L") {
                     document.getElementById("jenkel1").checked = true;
                 } else {

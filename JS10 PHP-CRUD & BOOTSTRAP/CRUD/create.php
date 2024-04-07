@@ -20,8 +20,8 @@
             </div>
             <label for="alamat">Alamat</label>
             <input type="text" name="alamat" id="alamat" required>
-            <label for="no_telp">No. Telp</label>
-            <input type="text" name="no_telp" id="no_telp" required>
+            <label for="no_tlp">No. Tlp</label>
+            <input type="text" name="no_tlp" id="no_tlp" required>
             <button type="submit">Simpan Data</button>
             <a href="indeks.php" class="btn-kembali">Kembali</a>
         </form>

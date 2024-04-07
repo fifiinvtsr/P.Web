@@ -4,11 +4,11 @@
     $nama = $_POST['nama'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
     $alamat = $_POST['alamat'];
-    $no_telp = $_POST['no_telp'];
+    $no_telp = $_POST['no_tlp'];
 
     if ($aksi == 'tambah') {
-        $query = "INSERT INTO anggota (nama, jenis_kelamin, alamat, no_telp)
-                  VALUES ('$nama', '$jenis_kelamin', '$alamat', '$no_telp')";
+        $query = "INSERT INTO anggota (nama, jenis_kelamin, alamat, no_tlp)
+                  VALUES ('$nama', '$jenis_kelamin', '$alamat', '$no_tlp')";
         if (mysqli_query($koneksi, $query)) {
             header("location: indeks.php");
         } else {
@@ -18,7 +18,7 @@
         if (isset($_POST['id'])) {
             $id = $_POST['id'];
             $query = "UPDATE anggota SET
-                      nama='$nama', jenis_kelamin='$jenis_kelamin', alamat='$alamat', no_telp='$no_telp'
+                      nama='$nama', jenis_kelamin='$jenis_kelamin', alamat='$alamat', no_tlp='$no_tlp'
                       WHERE id =$id";
             if (mysqli_query($koneksi, $query)) {
                 header("Location: indeks.php");
